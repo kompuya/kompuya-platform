@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -9,8 +8,10 @@ export default function Home() {
       <header className="border-b border-slate-200 bg-white/90 backdrop-blur sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            {/* Espacio para el Logo real de Kompuyá */}
-            <Image alt="Logo de Kompuyá" className="rounded-full border border-blue-100 shadow-sm" height="{50}" src="/logo.png" width="{50}"/>
+            {/* Logo estilizado */}
+            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-extrabold text-xl shadow-md">
+              K
+            </div>
             <span className="font-extrabold text-2xl tracking-tight text-slate-900">
               KOMPU<span className="text-blue-600">YÁ</span>
             </span>
@@ -23,8 +24,7 @@ export default function Home() {
           </nav>
 
           <div>
-            {/* Naranja como color de acción principal */}
-            <a href="[https://wa.me/573204531169](https://wa.me/573204531169)" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow-lg shadow-orange-500/20">
+            <a href="https://wa.me/573204531169" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow-lg shadow-orange-500/20">
               Solicitar recogida
             </a>
           </div>
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección 1: Reparación y Actualización (Tarjetas con íconos) */}
+      {/* Sección 1: Reparación y Actualización */}
       <section id="reparacion" className="py-20 bg-white border-y border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -74,9 +74,8 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Tarjetas interactiva de servicios */}
+          {/* Tarjetas de servicios */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 transition shadow-sm">
               <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xl mb-4 font-bold">🔧</div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">Reparación</h3>
@@ -100,25 +99,24 @@ export default function Home() {
               <h3 className="text-lg font-bold text-slate-900 mb-2">Software y licencias</h3>
               <p className="text-sm text-slate-600 leading-relaxed">Instalación, actualización y configuración con licencias originales.</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Franja promocional llamativa para el 10% de descuento */}
+      {/* Franja promocional 10% */}
       <section className="bg-orange-500 text-white py-8 shadow-inner">
         <div className="max-w-5xl mx-auto px-4 text-center flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
             <span className="text-xs uppercase font-bold tracking-widest text-orange-200">Oferta de bienvenida</span>
             <h3 className="text-2xl font-black">10% de descuento en tu primer servicio</h3>
           </div>
-          <a href="[https://wa.me/573204531169](https://wa.me/573204531169)" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-600 font-extrabold px-8 py-3 rounded-xl hover:bg-slate-100 transition shadow-md">
+          <a href="https://wa.me/573204531169" target="_blank" rel="noopener noreferrer" className="bg-white text-orange-600 font-extrabold px-8 py-3 rounded-xl hover:bg-slate-100 transition shadow-md">
             Obtener descuento
           </a>
         </div>
       </section>
 
-      {/* Sección 2: Comunicaciones Seguras (Fondo azul eléctrico) */}
+      {/* Sección 2: Comunicaciones Seguras */}
       <section id="comunicaciones" className="py-20 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
@@ -131,13 +129,12 @@ export default function Home() {
             </p>
             
             <div className="mt-8">
-              <a href="[https://wa.me/573204531169](https://wa.me/573204531169)" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3.5 rounded-xl transition inline-block shadow-lg shadow-orange-600/30">
+              <a href="https://wa.me/573204531169" target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3.5 rounded-xl transition inline-block shadow-lg shadow-orange-600/30">
                 Protege mi celular
               </a>
             </div>
           </div>
 
-          {/* Opciones de seguridad */}
           <div className="space-y-4 mt-12">
             <div className="p-4 rounded-xl bg-blue-700/60 border border-blue-500/50 flex items-center gap-4">
               <span className="text-2xl">🔒</span>
@@ -155,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección 3: Domicilio y Rastreo GPS (Pasos numerados 1, 2, 3) */}
+      {/* Sección 3: Domicilio y GPS */}
       <section id="domicilio" className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -186,7 +183,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Marcador de posición para foto del técnico */}
           <div className="mt-12 bg-white p-6 rounded-2xl border border-dashed border-slate-300 text-center text-slate-400 font-medium">
             [ Foto del técnico y mapa en vivo en desarrollo ]
           </div>

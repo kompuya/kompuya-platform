@@ -3,147 +3,127 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-blue-500 selection:text-white">
       {/* Navbar */}
-      <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+      <header className="border-b border-slate-200 bg-white/90 backdrop-blur sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Image 
-              src="/logo.png" 
-              alt="Logo de Kompuyá" 
-              width={60} 
-              height={60} 
-              className="rounded-full shadow-lg shadow-cyan-500/20"
-            />
-            <span className="font-extrabold text-3xl tracking-wider text-white">KOMPU<span className="text-cyan-400">YÁ</span></span>
+            {/* Espacio para Logo real de Kompuyá */}
+            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-extrabold text-xl shadow-md">
+              K
+            </div>
+            <span className="font-extrabold text-2xl tracking-tight text-slate-900">
+              KOMPU<span className="text-blue-600">YÁ</span>
+            </span>
           </div>
-          <nav className="hidden md:flex space-x-10 text-sm font-medium text-slate-300">
-            <a href="#reparacion" className="hover:text-cyan-400 transition">Reparación</a>
-            <a href="#comunicaciones" className="hover:text-cyan-400 transition">Comunicaciones Seguras</a>
-            <a href="#domicilio" className="hover:text-cyan-400 transition">Rastreo GPS</a>
+          <nav className="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="#reparacion" className="hover:text-blue-600 transition">Reparación</a>
+            <a href="#comunicaciones" className="hover:text-blue-600 transition">Comunicaciones Seguras</a>
+            <a href="#domicilio" className="hover:text-blue-600 transition">Rastreo GPS</a>
           </nav>
           <div>
-            <a href="tel:+573204531169" className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition shadow-lg shadow-cyan-500/25">
-              Solicitar Recogida
+            <a 
+              href="tel:+573204531169" 
+              className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition shadow-md hover:shadow-lg"
+            >
+              Solicitar recogida
             </a>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 lg:py-32 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-block mb-4 px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-xs font-semibold tracking-wider uppercase">
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-blue-50/50 to-slate-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block mb-6 px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-xs font-bold tracking-wide uppercase">
             Soporte técnico rápido, cercano y confiable
           </div>
-          <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
-            Reparamos y Actualizamos tus Equipos y Blindamos tus Comunicaciones
+          <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+            Reparamos tus equipos y <span className="text-blue-600">blindamos tus comunicaciones</span>
           </h1>
-          <p className="mt-8 text-xl sm:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            Desde la reparación física hasta la privacidad total en tus dispositivos móviles. Todo a domicilio con seguimiento GPS en tiempo real.
+          <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Desde la reparación física hasta la privacidad total de tus dispositivos móviles. Todo a domicilio, con seguimiento GPS en tiempo real.
           </p>
-          <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
-            <a href="#reparacion" className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-10 py-4.5 rounded-2xl text-lg transition shadow-xl shadow-cyan-500/30">
-              Ver Servicios de Reparación
+          
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            <a 
+              href="#reparacion" 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl text-base shadow-lg shadow-blue-600/30 transition"
+            >
+              Ver servicios de reparación
             </a>
-            <a href="#comunicaciones" className="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-10 py-4.5 rounded-2xl text-lg transition">
+            <a 
+              href="#comunicaciones" 
+              className="bg-white border-2 border-slate-200 hover:border-blue-300 text-slate-800 font-bold px-8 py-4 rounded-xl text-base shadow-sm transition"
+            >
               ¿Tus conversaciones son seguras?
             </a>
           </div>
+
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-sm font-semibold text-slate-600">
+            <span className="flex items-center gap-2">
+              <span className="text-blue-600 font-bold">✓</span> Servicio a domicilio
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-blue-600 font-bold">✓</span> Licencias originales
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-blue-600 font-bold">✓</span> Equipo 100% asegurado
+            </span>
+          </div>
         </div>
       </section>
+
+      {/* Franja Descuento 10% */}
+      <div className="bg-amber-500 py-4 text-slate-950 font-bold text-center px-4 shadow-md">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 text-base sm:text-lg">
+          <span className="bg-slate-950 text-white text-xs px-2.5 py-1 rounded-full uppercase tracking-wider font-extrabold">OFERTA ESPECIAL</span>
+          <span>¡Obtén un <span className="underline decoration-2">10% de descuento</span> en tu primer servicio técnico o blindaje!</span>
+        </div>
+      </div>
 
       {/* Sección 1: Reparación y Actualización */}
-      <section id="reparacion" className="py-24 bg-slate-900/60 border-y border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-12 grid grid-cols-1 lg:grid-cols-2 items-center">
-          <div className="max-w-2xl mx-auto lg:mx-0">
-            <h2 className="text-4xl font-extrabold text-white leading-tight">Reparamos y Actualizamos tus Equipos</h2>
-            <p className="mt-5 text-lg text-slate-400 leading-relaxed">Nos encargamos de que tu computador o laptop funcione al máximo, ya sea por problemas físicos o de software. Tenemos el mejor precio en programas y licencias originales.</p>
-            <ul className="mt-10 space-y-4 text-slate-300 text-lg">
-              {[
-                "Reparación",
-                "Formateo e instalación de Windows/Mac/Antivirus",
-                "Limpieza interna y cambio de pasta térmica",
-                "Instalación, actualización y configuración de Software",
-                "Optimización y aceleración del sistema",
-                "Recuperación de datos"
-              ].map((item) => (
-                <li key={item} className="flex items-center space-x-3">
-                  <span className="h-6 w-6 text-cyan-400 flex items-center justify-center border border-cyan-500/30 rounded-full bg-cyan-500/10">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="p-10 bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-transparent"></div>
-            <div className="relative z-10 py-12 text-center">
-              <div className="text-5xl mb-4">💻</div>
-              <h3 className="text-2xl font-bold text-white">Servicios Técnicos Integrales</h3>
-              <p className="text-sm text-slate-400 mt-2">Cubrimos todas las necesidades de tus equipos.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="reparacion" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="text-blue-600 font-bold text-xs uppercase tracking-widest">Reparación y Actualización</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+              Tu computador funcionando al máximo
+            </h2>
+            <p className="text-slate-600 text-lg mt-3 max-w-3xl">
+              Resolvemos problemas físicos y de software en computadores y portátiles. Tenemos¡Entendido completamente! Estas correcciones están extremadamente bien fundamentadas. El cambio a una paleta clara (fondo blanco, azul eléctrico y acento naranja) le da un aspecto mucho más moderno, tecnológico y comercial, alineado a lo que buscan tus clientes y el equipo evaluador.
 
-      {/* Sección 2: Comunicaciones Seguras */}
-      <section id="comunicaciones" className="py-24 border-t border-slate-800">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-6xl mb-8">🛡️</div>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
-            ¿Crees que tu seguridad y tus conversaciones son seguras?
-          </h2>
-          <p className="mt-6 text-2xl text-cyan-400 font-semibold">
-            Te aseguro que no lo son.
-          </p>
-          <p className="mt-8 text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            Nosotros en <span className="text-white font-bold">KOMPUYÁ</span> nos aseguramos de que tu comunicación sea segura a través de la encriptación telefónica. Blindamos tu dispositivo contra filtraciones, rastreos desautorizados y espionaje de tus mensajes y fotos. Garantizamos privacidad absoluta.
-          </p>
-        </div>
-      </section>
+Vamos a realizar **dos cambios en tu proyecto** para que quede exactamente como en la propuesta:
 
-      {/* Sección 3: Domicilio y Rastreo GPS */}
-      <section id="domicilio" className="py-24 bg-slate-900/40 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Logística KOMPUYÁ</span>
-            <h2 className="text-4xl font-extrabold text-white mt-3">Recogida con rastreo GPS en vivo</h2>
-            <p className="mt-6 text-xl text-slate-400 leading-relaxed">
-              Solicitas la recogida desde nuestra web o por teléfono, un técnico de <span className="text-white font-bold">KOMPUYÁ</span> va por tu equipo y ves exactamente en tiempo real dónde se encuentra el domiciliario en el mapa. Tu equipo estará 100% asegurado mientras lo tenemos.
-            </p>
-          </div>
-          <div className="bg-slate-900 border border-slate-800 p-10 rounded-3xl text-center shadow-2xl relative overflow-hidden">
-            <div className="text-6xl mb-6">📍</div>
-            <h3 className="text-2xl font-bold text-white">Mapa de Rastreo Activo</h3>
-            <p className="text-lg text-slate-400 mt-2">Aquí conectaremos el mapa interactivo para tus clientes.</p>
-          </div>
-        </div>
-      </section>
+1. **El título de la pestaña (SEO/Metadata).**
+2. **El contenido y diseño visual completo del código (`app/page.tsx`).**
 
-      {/* Footer */}
-      <footer id="contacto" className="bg-slate-950 border-t border-slate-800 py-20 text-center text-slate-400 text-lg">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
-            <Image 
-              src="/logo.png" 
-              alt="Logo de Kompuyá" 
-              width={70} 
-              height={70} 
-              className="rounded-full shadow-lg shadow-cyan-500/20"
-            />
-            <span className="font-extrabold text-3xl tracking-wider text-white">KOMPU<span className="text-cyan-400">YÁ</span></span>
-          </div>
-          <div className="mb-12 inline-block px-10 py-5 bg-cyan-500/20 border border-cyan-500/40 rounded-2xl text-3xl font-bold text-cyan-300 shadow-xl shadow-cyan-500/10">
-            10% Descuento en el primer servicio
-          </div>
-          <div className="space-y-6 text-lg">
-            <p className="flex items-center justify-center space-x-3"><span className="text-2xl">📞</span><span>Tel: <a href="tel:6012907584" className="hover:text-cyan-400">6012907584</a></span></p>
-            <p className="flex items-center justify-center space-x-3"><span className="text-2xl">💬</span><span>WhatsApp: <a href="https://wa.me/573204531169" className="hover:text-cyan-400">3204531169</a></span></p>
-            <p className="flex items-center justify-center space-x-3"><span className="text-2xl">📍</span><span>Dirección: Maranta Sector 4 Casa 39 Carrera 20B #188a-16</span></p>
-          </div>
-          <p className="mt-16 text-sm text-slate-600">© 2026 KOMPUYÁ. Todos los derechos reservados. Profesionales en tecnología y privacidad.</p>
-        </div>
-      </footer>
-    </div>
+---
+
+### Paso 1: Cambiar el título de la pestaña (Metadata)
+
+Para quitar el "Create Next App" y poner **“Kompuyá – Reparación de computadores a domicilio en Bogotá”**, debemos modificar el archivo de configuración global.
+
+1. Abre en tu editor (VS Code) el archivo: **`app/layout.tsx`**.
+2. Busca la sección que dice `export const metadata` y reemplázala para que quede así:
+
+```tsx
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Kompuyá – Reparación de computadores a domicilio en Bogotá",
+  description: "Reparación de equipos, licencias originales, encriptación telefónica y servicio a domicilio con rastreo GPS en tiempo real.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="es">
+      <body className="antialiased">{children}</body>
+    </html>
   );
 }
